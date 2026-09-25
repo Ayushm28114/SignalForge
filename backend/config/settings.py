@@ -29,14 +29,22 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+import os
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "rest_framework",
+    "apps.projects",
+    "apps.ingest",
+    "apps.rollups",
+    "apps.slos",
+    "apps.anomalies",
+    "apps.dashboard",
 ]
 
 MIDDLEWARE = [
@@ -72,23 +80,6 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
-import os
-
-INSTALLED_APPS = [
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
-    "rest_framework",
-    "apps.projects",
-    "apps.ingest",
-    "apps.rollups",
-    "apps.slos",
-    "apps.anomalies",
-    "apps.dashboard",
-]
 
 DATABASES = {
     "default": {
